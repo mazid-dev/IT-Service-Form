@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Service Request | VCube Soft and Tech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>VCube Soft and Tech</h1>
+    <h2>IT Service Request Form</h2>
+    <form id="serviceForm">
+      <div class="form-group">
+        <label>Your Name*</label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="form-group">
+        <label>Your Email Address*</label>
+        <input type="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label>Employee Code*</label>
+        <input type="text" name="empcode" required />
+      </div>
+      <div class="form-group">
+        <label>PC Number*</label>
+        <input type="text" name="pcnumber" required />
+      </div>
+      <div class="form-group">
+        <label>Where exactly is your problem?*</label>
+        <select name="issue" id="issueSelect" required>
+          <option value="" disabled selected>Select one</option>
+          <option>Internet not working</option>
+          <option>Computer automatic restart problem</option>
+          <option>Monitor not showing</option>
+          <option>Blue screen problem</option>
+          <option>Computer hangs or slows down</option>
+          <option>Software run slow</option>
+          <option>Windows automatic repair issue</option>
+          <option>Computer power problem</option>
+          <option>Mouse or keyboard not working</option>
+          <option>Hard disk failure (won't boot)</option>
+          <option>Render PC / Submitter not responding</option>
+          <option>Internet slow</option>
+          <option>Headphone or mic not working</option>
+          <option>Printer not working</option>
+          <option>Render PC or NAS server not detected</option>
+          <option>Shared folder not opening</option>
+          <option>Network drive not accessible</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div class="form-group" id="otherIssueGroup" style="display:none;">
+        <label>Please describe your issue</label>
+        <input type="text" name="otherIssue" placeholder="Write your issue" />
+      </div>
+      <div class="form-group">
+        <label>Upload Screenshot (optional)</label>
+        <input type="file" name="screenshot" accept="image/*" />
+      </div>
+      <button type="submit">Submit Request</button>
+      <p id="statusMsg"></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
